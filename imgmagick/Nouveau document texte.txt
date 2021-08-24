@@ -1,0 +1,4 @@
+#dwonload from: https://imagemagick.org/script/download.php#windows
+Ici, je prends une version 32 bits car mon python est sur 32 bits
+https://github.com/ImageMagick/ImageMagick
+
