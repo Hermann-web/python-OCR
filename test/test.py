@@ -21,7 +21,7 @@ import textract
 def methode2(filepath):
     text = textract.process(filepath, method='tesseract', language='fr')
     return [text]
-
+#better mais il bug sur EDP-Etudiants et la facture scannée
 
 
 print(methode1(filepath))

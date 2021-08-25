@@ -49,8 +49,8 @@ print ("------ Done -------")
 import os 
 
 pdf = "data/pdf/pdf1.pdf"
-image = "data/images/page_pdf1.png"
-image = "data/images/image3.jpg"
+image = "data/pdf/page_pdf1.png"
+
 
 dir = 'data/images'
 filename = 'image3.jpg'
