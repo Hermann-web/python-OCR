@@ -1,0 +1,4 @@
+get told about on: 
+found at: 
+#needed to install for use pytessaract and others like convert_from_path, modules,..
+#add to path: C:\Program Files\Tesseract-OCR
