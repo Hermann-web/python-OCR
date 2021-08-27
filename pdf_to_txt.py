@@ -7,7 +7,14 @@ import cv2 ##pip install opencv-python
 import numpy as np
 import pytesseract #pip install pytesseract #installer tesseract et mettre le lien vers le exe dans le code 
 
-#  Set the tesseract path in the script before calling image_to_string
+
+###prerequistes
+# install tesseract software: 
+# put tesseract in the path (C:\Program Files\Tesseract-OCR) 
+# install ghostscript software: 
+# put ghostscript in the path (C:\Program Files\gs\gs9.54.0)
+# pip install pytesseract, pillow
+# Set the tesseract path in the script before calling image_to_string
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 def get_string_way1(list_img_path):
     from PIL import Image as PILImage
@@ -57,12 +64,15 @@ def get_string_way2(list_img_path):
 ##########avec pytesseract et pyocr  #il fait bizarre sur le pdf1
 #https://xiaofeima1990.github.io/2016/12/19/extract-text-from-sanned-pdf/
 
-from wand.image import Image #import wand #installer ImageMagick
-from PIL import Image as PI #import ?
-import pyocr #import pyocr mais il marche pas sans des way liées à tesseract
+from wand.image import Image #import wand #installer ImageMagicket ghostscript, put them in the path 
+from PIL import Image as PI #pip install pillow
+import pyocr #import pyocr mais il marche pas (pyocr.get_available_tools() is empty list) sans des way liées à tesseract dans le path (et là encore). ç amarche avec le override d'en bas
 import pyocr.builders
 import io
 
+#override le chemin path 
+pyocr.tesseract.TESSERACT_CMD = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+#https://stackoverflow.com/questions/49162994/pyocr-get-availables-tools-returns-an-empty-list-can-access-tesseract-from
 def get_string_way3(list_img_path):
 
     print('--getting tools--')
@@ -95,18 +105,18 @@ def get_string_way3(list_img_path):
 def pdf_to_txt(pdf_abspath):
     from pdf_to_img import pdf_to_img #import a function to convert into image 
     list_img_path = pdf_to_img(pdf_abspath) #get first image (page1) 
-    liste_txt = get_string_way1(list_img_path))
-    return list_img_path
+    liste_txt = get_string_way1(list_img_path)
+    return liste_txt
 
 if __name__ == '__main__':
     pdf = "data/pdf/pdf1.pdf"
-    #pdf = "data/pdf/Echantillon Facture SNM .pdf"
+    pdf = "data/pdf/FactureSNM.pdf"
 
     from pdf_to_img import pdf_to_img #import a function to convert into image 
     pdf = os.path.abspath(pdf) #get abs path 
     list_img_path = pdf_to_img(pdf) #get first image (page1) 
-
+    
     sep = '\n\n'.join(5*[100*'-'])
-    print (sep.join(get_string_way1(list_img_path)))
+    with open(pdf+'.txt','w') as f: f.write(sep.join(get_string_way1(list_img_path)))
 
 
