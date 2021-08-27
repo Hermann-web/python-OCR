@@ -1,4 +1,6 @@
 get told about on: 
-found at: 
+	- https://hypi.io/2019/10/29/reading-text-from-invoice-images-with-python/
+	- 
+found at: https://github.com/UB-Mannheim/tesseract/wiki
 #needed to install for use pytessaract and others like convert_from_path, modules,..
 #add to path: C:\Program Files\Tesseract-OCR
