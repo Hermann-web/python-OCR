@@ -64,7 +64,7 @@ def get_image_folder(pdf_path,add=''):
 
 
 def pdf_to_img(filepath):
-    return way2(filepath)
+    return way3(filepath)
 
 if __name__ == '__main__':
     filename = "data/pdf/EDP-etudiants.pdf"
