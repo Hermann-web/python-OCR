@@ -1,1 +1,0 @@
-https://datascience.stackexchange.com/questions/33231/using-python-and-machine-learning-to-extract-information-from-an-invoice-inital

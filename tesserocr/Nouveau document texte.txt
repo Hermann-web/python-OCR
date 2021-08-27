@@ -1,3 +1,0 @@
-ce fichier est un wheel pour installer tesserocr
-
-pip install <package_name>.whl
