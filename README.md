@@ -10,7 +10,7 @@ In this repository, i have gone trough some ways de convert pdf to images using 
 #Prerequistes
 - Tesseract: https://github.com/tesseract-ocr/tesseract
 - ImageMagick: https://github.com/ImageMagick/ImageMagick 
-- ghostscript: 
+- ghostscript: https://www.ghostscript.com/download/gsdnld.html
 
 
 
