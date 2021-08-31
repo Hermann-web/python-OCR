@@ -1,0 +1,1 @@
+convert -density 300 a.pdf -resize 25% a.png

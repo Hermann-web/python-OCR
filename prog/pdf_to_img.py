@@ -18,7 +18,6 @@ def way1(filepath):
 
 #working
 #mauvaise résolution sur les images bizares
-
 def way2(filepath):
     from wand.image import Image as wandImage #need to install IMageMagick (to convert pdf to img) and ghostscript (to read pfd)
     Liste_path = []
@@ -33,7 +32,7 @@ def way2(filepath):
     return Liste_path
 #imgpath = '..../pages.png' --> Liste_path = ['..../pages-0.png','..../pages-1.png','..../pages-2.png','..../pages-3.png','..../pages-4.png','..../pages-5.png',.....] au lieu de ['..../pages.png']. du coup, le return n'est pas bon 
 
-#working 
+#working #Excellent!!! Passer la résolution à 900 fait que toutes les méthodes de img_to_txt marchent
 #il est mieux que way 2 car on peut augmenter la resolution et preciser les nom des pages as images
 def way3(filepath):
     from wand.image import Image as wandImage #need to install IMageMagick (to convert pdf to img) and ghostscript (to read pfd)
@@ -53,7 +52,7 @@ def way3(filepath):
         Liste_path.append(imgpath)
     print('\n')
     return Liste_path
-    
+
     
         
 #codes

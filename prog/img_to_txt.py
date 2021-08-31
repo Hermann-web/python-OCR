@@ -1,4 +1,4 @@
-import os 
+import os ,re
 
 ####avec pytesseract et PIL.image
 # Great !!! Il transforme en texte corectement les plus compliqués
@@ -6,6 +6,7 @@ import os
 import cv2 ##pip install opencv-python
 import numpy as np
 import pytesseract #pip install pytesseract #installer tesseract et mettre le lien vers le exe dans le code 
+
 
 
 ###prerequistes
@@ -18,15 +19,14 @@ import pytesseract #pip install pytesseract #installer tesseract et mettre le li
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 def get_string_way1(img_path):
     from PIL import Image as PILImage
-    print('--getting string from imagePages--',end='\n  ')
-    print(f'page{i}',end = ' ')
+    print('--getting string from imagePage--',end='\n  ')
+    #print(f'page{i}',end = ' ')
     # Recognize text with tesseract for python
     result = pytesseract.image_to_string(PILImage.open(img_path))
     return result
 
 
-    
-    
+
 #Il veut enlever du bruit: Il fait juste plus bizarre non ??
 #  Set the tesseract path in the script before calling image_to_string
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
@@ -84,18 +84,21 @@ def get_string_way3(img_path):
         builder=pyocr.builders.TextBuilder()
     )
     return txt
-
+    
 def img_to_txt(img_path):
-    return get_string_way1(img_path)
+    return get_string_way3(img_path)
 
 if __name__ == '__main__':
     pdf = "data/pdf/pdf1.pdf"
     pdf = "data/pdf/FactureSNM.pdf"
+    pdf = "data/pdf/FactureSNM/document-page0.pdf"
 
     from pdf_to_img import pdf_to_img #import a function to convert into image 
     pdf = os.path.abspath(pdf) #get abs path 
-    list_img_path = pdf_to_img(pdf) #get first image (page1) 
+    #list_img_path = pdf_to_img(pdf) #get first image (page1) 
+    list_img_path = ["data\pdf\FactureSNM\document-page0_imgs_900\\page_0.jpeg"]
+    list_img_path = ["data\\pdf\\Echantillon Facture SNM _imgs_3\\page_0.jpeg"]
     
     sep = '\n\n'.join(5*[100*'-'])
-    with open(pdf+'.txt','w') as f: f.write(sep.join([get_string_way1(elt) for elt in list_img_path))
+    with open(pdf+'_1.txt','w') as f: f.write(sep.join([get_string_way1(elt) for elt in list_img_path]))
 

@@ -1,0 +1,45 @@
+#                                   #
+#       ROADMAP FOR WEB DEVELOPMENT #
+#          by Hermann AGOSSOU       #
+#                                   #
+
+
+Cours1: HTML et CSS
+Contenu: Ils présentent les différentes syntaxes et techniques de html et css afin de générer les interfaces html avec des mises en forme css.
+https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3
+
+cours2: JS
+Il s'agit d'un cours sur le javascript. Tu ne ne pas le suivre et apprendre le language à l'aide du cours suivant. car on parlera de variables, boucles et fonctions. Vers la fin, il y a un quizz où on fait un projet à l'aide de Node JS ( un framework utilisé pour exécuter du code javascript) mais je remarque qu'ils ont adopté un nouveau format plus simple. Tu peux laisser ce cours et lire ce site
+https://openclassrooms.com/fr/courses/6175841/next-page-to-do
+
+cours3: JS pour le web
+contenu: Ce cours présente les outils de javascript qu'on utilise pour manipuler les objects d'une page web afin de la rendre moins statique
+https://openclassrooms.com/fr/courses/5543061-ecrivez-du-javascript-pour-le-web/5577726-optimisez-votre-code
+
+
+cours5: Python: Algorithmes non supervisés en ML
+Ce n'est pas nouveau pour toi, j'imagine
+https://openclassrooms.com/fr/courses/4379436-explorez-vos-donnees-avec-des-algorithmes-non-supervises/4379571-partitionnez-vos-donnees-avec-dbscan
+
+
+cours6: PHP 
+contenu: J'ai appris php car je voulais voir comment faire interragir un site web (en front-end) et une base de données (mysql par exemple). J'ai fait le focus sur la partie mySQL Database. J'ai juste parcouru les autres pour savoir comment faire les installations nécessaires et aussi connaitre les syntaxes importantes pour écrire du code php. 
+https://www.w3schools.com/php/
+
+
+cours7: Bootstrap 
+Bootstrap est un framework qui facilite l'écriture du CSS. Mais, passe à ce cours si tu travailles sur un projet où tu en as besoin. Tu apprendras plus vite. Même conseil que pour le framework suivant: Jquerry. Pour ma part, j'en avais besoin pour mon stage donc je suis allé sur le site w3schools.
+https://www.w3schools.com/bootstrap5/
+
+cours8: Jquerry
+JQuerry est un framework qui facilite l'"criture du code javascript pour le web. Certains développeurs ne maitrisent mieux Jquerry que javascript mais dans ce cas, ce n'est pas toujours évident de traviller dans une team qui n'utilise pas Jquerry.
+https://www.w3schools.com/jquery/
+
+cours9: Django
+C'est un framework Python pour faire du développement web.
+J'ai suivi une partie de ce cours pour connaitre l'architecture Django (comment on crée un projet, comment les fichiers sont organisés, A quoi sert chacun d'eux). Mais, j'ai appris le reste en lisant la documentation et en visitant stackoverflow.
+
+
+cours10: ajax 
+ajax est utilisé pour connecter le front-end et le back-end à travers des requêtes
+https://www.w3schools.com/xml/ajax_intro.asp
