@@ -1,10 +1,10 @@
 from PIL import Image, ImageOps
 import subprocess, sys, os, glob
- 
+
 # minimum run of adjacent pixels to call something a line
 H_THRESH = 300
 V_THRESH = 300
- 
+
 def get_hlines(pix, w, h):
     """Get start/end pixels of lines containing horizontal runs of at least THRESH black pix"""
     hlines = []
@@ -24,7 +24,7 @@ def get_hlines(pix, w, h):
         if run > H_THRESH:
             hlines.append((x1,y,x2,y))
     return hlines
- 
+
 def get_vlines(pix, w, h):
     """Get start/end pixels of lines containing vertical runs of at least THRESH black pix"""
     vlines = []
@@ -129,13 +129,15 @@ def get_image_data(filename):
 def split_pdf(filename):
     """Split PDF into PNG pages, return filenames"""
     prefix = filename[:-4]
-    cmd = "convert -density 600 %s working/%s-%%d.png" % (filename, prefix)
+    cmd = "magick convert -density 600 %s working/%s-%%d.png" % (filename, prefix)
+    print('cmd = ',cmd)
     subprocess.call([cmd], shell=True)
     return [f for f in glob.glob(os.path.join('working', '%s*' % prefix))]
- 
+
 def extract_pdf(filename):
     """Extract table data from pdf"""
-    pngfiles = split_pdf(filename)
+    #pngfiles = split_pdf(filename)
+    pngfiles = [ "dic.png" ]
     sys.stderr.write("Pages: %d\n" % len(pngfiles))
     # extract table data from each page
     data = []
@@ -149,7 +151,7 @@ def extract_pdf(filename):
     # remove split pages
     #os.system("rm working/*")
     return data
- 
+
 if __name__ == '__main__':
     if len(sys.argv) != 2:
         print ("Usage: ctocr.py FILENAME")
