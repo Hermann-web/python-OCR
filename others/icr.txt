@@ -1,0 +1,21 @@
+
+# State of the art
+ICR really is harder than OCR. Tesseract cannot do it. 
+My first way would be to search any feasible solution (software or programming)
+
+# Build a custom solution
+I test some of them. If i  can't afford using them, i read paper on that matter and i create my own model. I have seen some mobile applications reading hand-writing text. So, it has been done. I think captcha are used to get some data. I am sure these data are used to train some convolution neural networks (or even Recurrent neural Network). 
+
+# character detection into a structured format (as you want to create a cheat)
+A first deal would be to identify words. You can either split the document vertically and horizontally like here (https://github.com/Hermann-web/python-OCR/blob/main/others/test1.py for rows and columns separated with black lines) or you can use a deep learning based model ( i've already seen that). I also know that open-cv can detect edges (cv2.findContours)
+You can manage to get words in a structured format like here (https://hypi.io/2019/10/29/reading-text-from-invoice-images-with-python/) or   and send them as to icr model
+
+# character recognition 
+The icr model could be build with a convolution neural network trained with a dataset. That dataset contains many hand-written words or characters of your vocabulary. If there is any possibilty to do your training like tesseract, it will be great (I know tesseract use LSTM but i don't how more about it). Still, you can build a strong CNN suited for your dataset like here (https://www.kaggle.com/dromosys/handwriting-recognition-cnn)  Or if you find a pre-entrained model for character recognition, it will be great.
+
+# Data issue 
+If you need data for the CNN training you can use MNIST dataset like here (https://github.com/anandhkishan/Handwritten-Character-Recognition-using-CNN) or here (https://learn-neural-networks.com/handwriting-recognition-by-using-convolutional-neural-network/)
+I've done it for hand-written number recognition here based on that dataset (https://colab.research.google.com/drive/1i4YmIN6zR8L6kj0WOf1auLY1Ef_Z4HxX?usp=sharing)
+
+# The spreadsheat
+With the words found, you can easily create a excel file with python
