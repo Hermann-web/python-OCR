@@ -14,7 +14,7 @@ In this repository, i have gone trough some ways de convert pdf to images using 
 
 
 
-Bibliographie
+#Bibliographie
 - https://hypi.io/2019/10/29/reading-text-from-invoice-images-with-python/
 - invoice2data, a python library: https://medium.com/version-1/my-experience-extracting-invoice-data-using-invoice2data-in-python-1c6450fa001f
 - https://datascience.stackexchange.com/questions/33231/using-python-and-machine-learning-to-extract-information-from-an-invoice-inital
@@ -24,3 +24,18 @@ Bibliographie
 - a similar project in C#: https://github.com/robela/OCR-Invoice
 - veryfi: an excellent API to get informations from an invoice or receipt: https://www.linkedin.com/pulse/extract-data-from-receipt-invoice-5-lines-ofcode-dmitry-birulia/?articleId=6676262454793764864
 - Others: https://hypi.io/2019/10/29/reading-text-from-invoice-images-with-python/; 
+
+
+#More ressources 
+- projects: https://aihubprojects.com/handwriting-recognition-using-cnn-ai-projects/
+- https://nanonets.com/blog/handwritten-character-recognition/
+- https://aihubprojects.com/handwriting-recognition-using-cnn-ai-projects/
+
+#more on tesseract 
+https://learnopencv.com/deep-learning-based-text-recognition-ocr-using-tesseract-and-opencv/
+https://learnopencv.com/category/text-recognition/
+
+#datasets 
+- https://www.kaggle.com/dromosys/handwriting-recognition-cnn 
+	- https://www.kaggle.com/tejasreddy/iam-handwriting-top50
+
