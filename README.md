@@ -30,6 +30,7 @@ In this repository, i have gone trough some ways de convert pdf to images using 
 - projects: https://aihubprojects.com/handwriting-recognition-using-cnn-ai-projects/
 - https://nanonets.com/blog/handwritten-character-recognition/
 - https://aihubprojects.com/handwriting-recognition-using-cnn-ai-projects/
+- https://datascience.stackexchange.com/questions/33231/using-python-and-machine-learning-to-extract-information-from-an-invoice-inital
 
 #more on tesseract 
 https://learnopencv.com/deep-learning-based-text-recognition-ocr-using-tesseract-and-opencv/
